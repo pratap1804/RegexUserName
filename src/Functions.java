@@ -6,4 +6,6 @@ public interface Functions {
 	boolean checkValidLastName(String string);
 	
 	boolean checkValidEmail(String string);
+	
+	boolean checkValidMobileNumber(String string);
 }

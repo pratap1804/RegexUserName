@@ -17,4 +17,10 @@ public class UserNameImplementation implements Functions {
 		Pattern myPattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
 		return myPattern.matcher(string).matches();
 	}
+
+	@Override
+	public boolean checkValidMobileNumber(String string) {
+		Pattern myPattern = Pattern.compile("^(91){1}[ ][0-9]{10}");
+		return myPattern.matcher(string).matches();
+	}
 }
