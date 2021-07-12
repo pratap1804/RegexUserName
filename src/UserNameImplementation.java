@@ -12,4 +12,9 @@ public class UserNameImplementation implements Functions {
 		return myPattern.matcher(string).matches();
 	}
 
+	@Override
+	public boolean checkValidEmail(String string) {
+		Pattern myPattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+		return myPattern.matcher(string).matches();
+	}
 }

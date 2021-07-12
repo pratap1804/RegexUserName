@@ -17,4 +17,10 @@ class UserNameTest {
 		Assert.assertEquals(true, result);
 	}
 
+	@Test
+	void givenEmail_ShoulHave_ThreeMandatoryPart_TwoOptionalPart() {
+		UserNameImplementation myUserName = new UserNameImplementation();
+		boolean result = myUserName.checkValidLastName("pratap.abc@gmail.com");
+		Assert.assertEquals(true, result);
+	}
 }
