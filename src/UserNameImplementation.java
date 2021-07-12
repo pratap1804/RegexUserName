@@ -23,4 +23,10 @@ public class UserNameImplementation implements Functions {
 		Pattern myPattern = Pattern.compile("^(91){1}[ ][0-9]{10}");
 		return myPattern.matcher(string).matches();
 	}
+
+	@Override
+	public boolean checkForValidPasswordFirstRule(String string) {
+		Pattern myPattern = Pattern.compile("^[a-z]{8,}");
+		return myPattern.matcher(string).matches();
+	}
 }

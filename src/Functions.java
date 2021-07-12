@@ -8,4 +8,6 @@ public interface Functions {
 	boolean checkValidEmail(String string);
 	
 	boolean checkValidMobileNumber(String string);
+	
+	boolean checkForValidPasswordFirstRule(String string);
 }

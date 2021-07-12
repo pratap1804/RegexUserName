@@ -20,7 +20,7 @@ class UserNameTest {
 	@Test
 	void givenEmail_ShoulHave_ThreeMandatoryPart_TwoOptionalPart() {
 		UserNameImplementation myEmail = new UserNameImplementation();
-		boolean result = myEmail.checkValidLastName("pratap.abc@gmail.com");
+		boolean result = myEmail.checkValidLastName("pratap.1804@gmail.com");
 		Assert.assertEquals(true, result);
 	}
 	
@@ -28,6 +28,13 @@ class UserNameTest {
 	void givenMobile_ShouldBeginWithCountryCode_AndHaveMinimumTenNumbers() {
 		UserNameImplementation myMobileNumber = new UserNameImplementation();
 		boolean result = myMobileNumber.checkValidMobileNumber("91 8989156503");
+		Assert.assertEquals(true, result);
+	}
+	
+	@Test
+	void givenPassword_ShouldBeHaving_MinimumEightCharacters() {
+		UserNameImplementation myPasswordFirstRule = new UserNameImplementation();
+		boolean result = myPasswordFirstRule.checkValidMobileNumber("abcdefgh");
 		Assert.assertEquals(true, result);
 	}
 }
