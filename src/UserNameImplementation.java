@@ -26,7 +26,13 @@ public class UserNameImplementation implements Functions {
 
 	@Override
 	public boolean checkForValidPasswordFirstRule(String string) {
-		Pattern myPattern = Pattern.compile("^[a-z]{8,}");
+		Pattern myPattern = Pattern.compile("[a-z]{8,}");
+		return myPattern.matcher(string).matches();
+	}
+
+	@Override
+	public boolean checkForValidPasswordSecondRule(String string) {
+		Pattern myPattern = Pattern.compile("[a-z]{7,}[A-Z]{1,}");
 		return myPattern.matcher(string).matches();
 	}
 }

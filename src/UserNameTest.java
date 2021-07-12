@@ -23,7 +23,7 @@ class UserNameTest {
 		boolean result = myEmail.checkValidLastName("pratap.1804@gmail.com");
 		Assert.assertEquals(true, result);
 	}
-	
+
 	@Test
 	void givenMobile_ShouldBeginWithCountryCode_AndHaveMinimumTenNumbers() {
 		UserNameImplementation myMobileNumber = new UserNameImplementation();
@@ -34,7 +34,14 @@ class UserNameTest {
 	@Test
 	void givenPassword_ShouldBeHaving_MinimumEightCharacters() {
 		UserNameImplementation myPasswordFirstRule = new UserNameImplementation();
-		boolean result = myPasswordFirstRule.checkValidMobileNumber("abcdefgh");
+		boolean result = myPasswordFirstRule.checkForValidPasswordFirstRule("abcdefgh");
+		Assert.assertEquals(true, result);
+	}
+	
+	@Test
+	void givenPassword_ShouldBeHaving_AtleatOneUpperCaseCharacter() {
+		UserNameImplementation myPasswordSecondRule = new UserNameImplementation();
+		boolean result = myPasswordSecondRule.checkForValidPasswordSecondRule("abcdefghA");
 		Assert.assertEquals(true, result);
 	}
 }

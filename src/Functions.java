@@ -10,4 +10,6 @@ public interface Functions {
 	boolean checkValidMobileNumber(String string);
 	
 	boolean checkForValidPasswordFirstRule(String string);
+	
+	boolean checkForValidPasswordSecondRule(String string);
 }
