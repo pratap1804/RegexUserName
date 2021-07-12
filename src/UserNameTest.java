@@ -4,9 +4,16 @@ import org.junit.jupiter.api.Test;
 class UserNameTest {
 
 	@Test
-	void givenUserName_ShouldBeginWithAUpperCase_AndHaveMinimumThreeCharacters() {
+	void givenFirstName_ShouldBeginWithAUpperCase_AndHaveMinimumThreeCharacters() {
 		UserNameImplementation myUserName = new UserNameImplementation();
-		boolean result = myUserName.checkValidFirstName("AbAbcde");
+		boolean result = myUserName.checkValidFirstName("Shubham");
+		Assert.assertEquals(true, result);
+	}
+	
+	@Test
+	void givenLastName_ShouldBeginWithAUpperCase_AndHaveMinimumThreeCharacters() {
+		UserNameImplementation myUserName = new UserNameImplementation();
+		boolean result = myUserName.checkValidLastName("Pratap");
 		Assert.assertEquals(true, result);
 	}
 
