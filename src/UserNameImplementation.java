@@ -41,4 +41,10 @@ public class UserNameImplementation implements Functions {
 		Pattern myPattern = Pattern.compile("[a-z]{7,}[A-Z]{1,}[0-9]{1,}");
 		return myPattern.matcher(string).matches();
 	}
+
+	@Override
+	public boolean checkForValidPasswordFourthRule(String string) {
+		Pattern myPattern = Pattern.compile("[a-z]{7,}[A-Z]{1,}[0-9]{1,}[@!#$%&*]{1,}");
+		return myPattern.matcher(string).matches();
+	}
 }

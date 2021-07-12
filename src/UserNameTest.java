@@ -50,4 +50,11 @@ class UserNameTest {
 		boolean result = myPasswordThirdRule.checkForValidPasswordThirdRule("abcdefghiA123");
 		Assert.assertEquals(true, result);
 	}
+	
+	@Test
+	void givenPassword_ShouldBeHaving_AtleatOneUpperCaseCharacter_WithOneNumeric_MustContainAsymbol() {
+		UserNameImplementation myPasswordFourthRule = new UserNameImplementation();
+		boolean result = myPasswordFourthRule.checkForValidPasswordFourthRule("abcdefghiA123@");
+		Assert.assertEquals(true, result);
+	}
 }
