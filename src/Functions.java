@@ -12,4 +12,6 @@ public interface Functions {
 	boolean checkForValidPasswordFirstRule(String string);
 	
 	boolean checkForValidPasswordSecondRule(String string);
+	
+	boolean checkForValidPasswordThirdRule(String string);
 }

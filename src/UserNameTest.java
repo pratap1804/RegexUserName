@@ -17,7 +17,6 @@ class UserNameTest {
 		Assert.assertEquals(true, result);
 	}
 
-	@Test
 	void givenEmail_ShoulHave_ThreeMandatoryPart_TwoOptionalPart() {
 		UserNameImplementation myEmail = new UserNameImplementation();
 		boolean result = myEmail.checkValidLastName("pratap.1804@gmail.com");
@@ -42,6 +41,13 @@ class UserNameTest {
 	void givenPassword_ShouldBeHaving_AtleatOneUpperCaseCharacter() {
 		UserNameImplementation myPasswordSecondRule = new UserNameImplementation();
 		boolean result = myPasswordSecondRule.checkForValidPasswordSecondRule("abcdefghA");
+		Assert.assertEquals(true, result);
+	}
+	
+	@Test
+	void givenPassword_ShouldBeHaving_AtleatOneUpperCaseCharacter_WithOneNumeric() {
+		UserNameImplementation myPasswordThirdRule = new UserNameImplementation();
+		boolean result = myPasswordThirdRule.checkForValidPasswordThirdRule("abcdefghiA123");
 		Assert.assertEquals(true, result);
 	}
 }
